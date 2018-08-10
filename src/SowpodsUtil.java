@@ -47,11 +47,26 @@ public class SowpodsUtil {
             System.out.println(pair.getKey() + " " + pair.getValue().toString());
         }
     }
-
-    public static Map getAnagramMap()  {
-        return anagramMap;
+    public static ArrayList<String> getAnagramEquivalent(String word){
+        word = sortString(word);
+        return anagramMap.get(word);
     }
 
+    public static ArrayList<String> getAnagramKeyset(int wordLength)  {
+        intSowpodsUtil(wordLength);
+        ArrayList<String> tmp = new ArrayList<>(anagramMap.keySet());
+        return tmp;
+    }
+
+    private ArrayList sortBasedOnFrequency(ArrayList<String> arrayList){
+
+    }
+//    public class CustomComparator implements Comparator<String> {
+//        @Override
+//        public int compare(String o1, String o2) {
+//            return ;
+//        }
+//    }
     private static boolean hasUniqueChar(String str){
         int checker = 0;
 

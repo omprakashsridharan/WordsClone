@@ -25,7 +25,7 @@ public class Solution {
                 return HARD;
             default:
                 return EASY;
-                    
+
         }
     }
 }
